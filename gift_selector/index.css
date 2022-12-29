@@ -1,0 +1,234 @@
+:root {
+    --light-yellow: #FBF3DB;
+    --yellow: #FBF3AB;
+    --yellow-gradient: linear-gradient(
+                    135deg,
+                    hsl(54deg 91% 83%) 0%,
+                    hsl(53deg 92% 84%) 21%,
+                    hsl(52deg 93% 85%) 30%,
+                    hsl(51deg 93% 86%) 39%,
+                    hsl(50deg 93% 87%) 46%,
+                    hsl(49deg 93% 88%) 54%,
+                    hsl(48deg 92% 89%) 61%,
+                    hsl(47deg 89% 90%) 69%,
+                    hsl(46deg 86% 91%) 79%,
+                    hsl(45deg 80% 92%) 100%
+                    );
+    --light-pink: #F0B9DD;
+    --lavender: #C7B9FF;
+    --deep-pink: #F04C86;
+    --raisin: #2B283A;
+    --white: #fff;
+    --light-pink-gradient: linear-gradient(
+                        315deg,
+                        hsl(321deg 65% 83%) 0%,
+                        hsl(321deg 65% 84%) 21%,
+                        hsl(321deg 65% 85%) 30%,
+                        hsl(321deg 65% 86%) 39%,
+                        hsl(321deg 65% 87%) 46%,
+                        hsl(322deg 65% 88%) 54%,
+                        hsl(322deg 64% 89%) 61%,
+                        hsl(322deg 64% 90%) 69%,
+                        hsl(322deg 63% 91%) 79%,
+                        hsl(322deg 63% 92%) 100%
+                    );
+    --pink-gradient: linear-gradient(
+                    45deg,
+                    hsl(339deg 85% 62%) 0%,
+                    hsl(338deg 84% 65%) 11%,
+                    hsl(337deg 84% 68%) 22%,
+                    hsl(335deg 83% 70%) 33%,
+                    hsl(333deg 81% 73%) 44%,
+                    hsl(331deg 79% 75%) 56%,
+                    hsl(329deg 76% 77%) 67%,
+                    hsl(327deg 73% 79%) 78%,
+                    hsl(324deg 69% 81%) 89%,
+                    hsl(321deg 65% 83%) 100%
+                );
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: var(--raisin);
+        background: var(--light-pink-gradient);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 0;
+        font-family: 'Karla', sans-serif;
+        margin: 40px auto;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 4em;
+    }
+    
+    form * {
+        padding: .5em;
+        font-size: 1.3rem;
+        font-family: inherit;       
+    }
+    
+    form label,
+    form button {
+        font-weight: 700;
+    }
+    
+    form *:not(label):not(div),
+    .result {
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        border-radius: 5px;
+        border: none;
+        line-height: 2rem;
+    }
+    
+    select { 
+        background: var(--white);
+        color: var(--raisin);
+    }
+    
+    .result {
+        background: var(--pink-gradient);
+        color: var(--raisin);
+        min-width: 300px;
+        max-width: 5ch;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        padding: 1em;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    .result span {
+        color: var(--deep-pink);
+        font-weight: 700;
+    }
+    
+    button {
+        color: var(--white);
+        background: var(--deep-pink);
+    }
+    
+    button:hover,
+    button:focus {
+        transform: scale(1.02);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    #wrapper {
+        border: 1px solid var(--deep-pink);
+        border-radius: 5px;
+        padding: 50px 10px 10px 10px;
+        background: var(--yellow-gradient);
+        min-height: 665px;
+    }
+    
+#confirm-msg {
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+    /* Error message */
+    #error {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 1000;
+        line-height: 1rem;
+        color: var(--raisin);
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+    
+    .show-error {
+        border: 4px solid var(--deep-pink);
+        background-color: var(--lavender);
+    }
+    
+    .highlight {
+        animation-duration: 1.2s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes slidein {
+        from {
+            transform: scale(1);
+        }
+    
+        20% {
+            transform: scale(1.07);
+        }
+    
+        35% {
+            transform: scale(1);
+        }
+    
+        to {
+            transform: scale(1);
+        }
+    }
+    
+    /* Add a border to the selects so that they don't move 
+    when the error border is applied */
+    #food-select, #transport-select {
+        border: 2px var(--yellow) solid !important;
+    }
+    
+    /* Add balloons styling */
+    #check-btn {
+        padding: 0;
+        margin: 10px 0 35px 0;
+    }
+    
+    #check-btn label {
+        text-align: center;
+        border-radius: 5px;
+        line-height: 2rem;    
+        display: block;
+        color: white;
+        background-color: var(--light-pink);
+        transition: background-color 0.3s;
+    }
+    
+    #check-btn input {
+        position: absolute;
+        top: -20px;
+    }
+    
+    #check-btn label:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    #check-btn input:checked + label {
+        background: var(--pink-gradient);
+        color: white;
+        transition: background-color 0.3s;
+    }
+    
+    #check-btn input:checked + label:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    .hide {
+        display: none;
+    }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Invoice Creator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Invoice Creator" />
+    <meta name="title" property="og:title" content="Invoice Creator" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51918421041_9ee881c176_o.jpg" />
+    <meta name="description" property="og:description" content="Invoice Creator" />
+    <meta name="author" content="Theo Ntogiakos" />
+</head>
+
+<body>
+    <header>
+        <h1>Invoice creator</h1>
+        <p>Thanks for choosing GoodCorp, LLC!</p>
+    </header>
+    <main>
+        <div id="services">
+            <button id="washcar">Wash Car: $10</button>
+            <button id="mowlawn">Mow Lawn: $20</button>
+            <button id="pullweeds">Pull Weeds: $30</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>TASK</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="breakdown">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table id="total">
+            <thead>
+                <tr>
+                    <th>NOTES</th>
+                    <th>TOTAL AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>We accept cash, credit card, or PayPal</td>
+                    <td id="totalamount">$0</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <button id="sendinvoice-btn"><img id="email-img" src="images/email.svg" alt="email"> Send invoice</button>
+    </footer>
+    <script src="invoice.js"></script>
+</body>
+
+</html>

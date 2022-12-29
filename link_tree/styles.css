@@ -1,0 +1,302 @@
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Karla;
+    text-align: center;
+    padding: 24px 12px;
+    background: #C7B9FF;
+    margin: 15px;
+    margin-bottom: 125px;
+    letter-spacing: 0.3px;
+}
+
+h1, h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin-bottom: 6px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin: 0px 40px;
+    padding-top: 0;
+
+}
+
+ul {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 664px;
+    margin-bottom: 53px;
+}
+
+li {
+    display: table;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+
+    background-position: top 12px left 10px;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-color: white;
+    
+    border: 2px solid black;
+    list-style: none;
+    
+    margin: 24px 0;
+    
+    border-radius: 10px;
+	box-shadow: 10px 10px #222;
+    transition: height 2s, margin-bottom 2s;
+}
+
+li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #2B283a;
+    padding: 0 50px;
+    height: 56px;
+}
+
+li:hover, #youtube:hover, #twitter:hover {
+    transform: translateX(2px) translateY(3px);
+    box-shadow: 8px 7px #222;
+}
+
+li:active, #youtube:active, #twitter:active {
+    transform: translateX(5px) translateY(6px);
+    box-shadow: 5px 4px #222;
+}
+
+a>svg {
+    margin: -10px;
+    height: 32px;
+}
+
+a:hover>svg {
+    transform: scale(1.1);
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} 
+
+#top {
+    margin: 12px 0 30px;
+}
+
+#logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin: 0 0 16px;
+}
+
+#scrimba-love {
+    background-position: top 3px left 5px;
+    background-size: 50px;
+    background-image: url(images/heart.png);
+}
+
+#youtube {
+    cursor: pointer;
+    line-height: 60px;
+    background-image: url(images/brand-youtube.svg);
+}
+
+#podcast {
+    background-image: url(images/microphone.svg);
+}
+
+#digest {
+    background-image: url(images/news.svg);
+}
+
+#recordings {
+    background-image: url(images/building-bank.svg);
+}
+
+#discord {
+    background-image: url(images/brand-discord.svg);
+}
+
+#twitter {
+    cursor: pointer;
+    line-height: 60px;
+    background-image: url(images/brand-twitter.svg);
+}
+
+#linkedin {
+    background-image: url(images/briefcase.svg);
+}
+
+#trouble {
+    background-image: url(images/ambulance.svg);
+}
+
+#support {
+    background-image: url(images/building-hospital.svg);
+}
+
+#handbook {
+    background-image: url(images/book.svg);
+}
+
+#pricing {
+    background-image: url(images/award.svg);
+}
+
+#cards {
+    background-image: url(images/gift.svg);
+}
+
+#youtube>span, #twitter>span {
+    display: block;
+    background-image: url(images/drop-down.png);
+    background-size: 13px;
+    background-position: top 25px right 18px;
+    background-repeat: no-repeat;
+}
+
+#twitter-link {
+    display: block;
+    cursor: pointer;
+}
+
+#tweet {
+    display: flex;
+}
+#tweet>div {
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+}
+#view-tweet-btn {
+    width: 95%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 48px;
+    vertical-align: middle;
+    padding: 0;
+    margin: 35px auto 20px auto;
+}
+
+#view-tweet-btn:hover {
+    background-color: #1F2D3D;
+}
+
+#youtube.remove-press:hover, #twitter.remove-press:hover {
+    transform: none;
+    box-shadow: 10px 10px #222;
+}
+
+.scrimba-link {
+    background-position: bottom 3px left 5px;
+    background-size: 50px;
+    background-image: url(images/round-logo.png);
+}
+
+.player {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.close-btn {
+    display: relative;
+    top: 50px;
+    left: 50px;
+    height: 32px;
+    width: 32px;
+    
+    border-radius: 50%;
+    border: none;
+
+    font-size: 10px;
+    font-weight: 1000;
+
+    color: white;
+    background-color: black;
+    
+    box-shadow: none;
+
+    opacity: 0.5;	
+    transition: opacity 0.3s ease-out;
+
+    cursor: pointer;
+}
+
+.remove-style {
+    background: none;
+    border: none;
+    box-shadow: none;
+    display: block;
+    height: 20px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.remove-style:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+.highlight {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(1);
+    }
+
+    12% {
+        transform: scale(1.04);
+    }
+
+    18% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

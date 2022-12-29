@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Password Generator" />
+    <meta name="title" property="og:title" content="Password Generator" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51918421061_e705b06b3f_o.jpg" />
+    <meta name="description" property="og:description" content="Password Generator" />
+    <meta name="author" content="Theo Ntogiakos" />
+</head>
+
+<body>
+    <div id="main">
+        <h1>
+            <span id="first-line">Generate a</span>
+            <span id="second-line">
+                <br>random password
+            </span>
+        </h1>
+        <p>
+            Never use an insecure password again.
+        </p>
+        <div id="buttons-div">
+            <button id="genBtn" onclick="genPasswords()">
+                ⚡ Generate passwords
+            </button>
+            <input id="pass-length" type="number" value="15" min="8">
+        </div>
+        <hr>
+        <div id="passwords">
+            <input id="pass1" type="text" onclick="copyToClipboard(this.id)">
+            <input id="pass2" type="text" onclick="copyToClipboard(this.id)">
+            <input id="pass3" type="text" onclick="copyToClipboard(this.id)">
+            <input id="pass4" type="text" onclick="copyToClipboard(this.id)">
+        </div>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
